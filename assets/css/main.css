@@ -35,9 +35,9 @@
 }
 
 .header__navbar-user-name {
-  margin-left: 8px;
-  font-size: 1.4rem;
-  font-weight: 400;
+  margin-left: 4px;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .header__navbar-user:hover .header__navbar-user-menu {
@@ -79,9 +79,6 @@
   height: 8px;
 }
 
-.header__navbar-user-item {
-}
-
 .header__navbar-user-item a {
   text-decoration: none;
   color: #555;
@@ -104,6 +101,10 @@
   background-color: #fafafa;
 }
 
+.header__navbar-user-item--separate {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .header__navbar-item--has-qr:hover .header__qr {
   display: block;
 }
@@ -111,10 +112,14 @@
 .header__navbar-item,
 .header__navbar-item-link {
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--white-color);
   text-decoration: none;
   font-weight: 300;
+}
+
+.header__navbar-icon-link:nth-child(2) {
+  margin-left: 3px;
 }
 
 .header__navbar-item,
@@ -208,19 +213,16 @@
 /* Header notifications */
 .header__notify {
   position: absolute;
+  z-index: 1;
   top: 120%;
   width: 400px;
   right: 0;
-  border: 1px solid #d3d3d3;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
   background-color: var(--white-color);
   cursor: default;
-  transform-origin: calc(100% - 20px) top;
+  transform-origin: calc(100% - 32px) top;
   animation: headerNotifyGrown ease-in 0.2s;
-
-  --webkit-animation: headerNotifyGrown ease-in 0.2s;
-  --ms-animation: headerNotifyGrown ease-in 0.2s;
-  --moz-animation: headerNotifyGrown ease-in 0.2s;
-
   will-change: opacity, transform;
   display: none;
 }
@@ -324,9 +326,6 @@
   margin-top: 3px;
 }
 
-.header__notify-footer {
-}
-
 .header__notify-footer-btn {
   text-decoration: none;
   color: var(--black-color);
@@ -368,9 +367,6 @@
   font-weight: 400;
   color: var(--primary-color);
   cursor: pointer;
-}
-
-.auth-form__form {
 }
 
 .auth-form__input {
@@ -469,6 +465,11 @@
 
 .header__logo {
   width: 200px;
+}
+
+.header__logo-link {
+  text-decoration: none;
+  color: transparent;
 }
 
 .header__logo-img {
@@ -715,7 +716,7 @@
 .header__search-option {
   position: absolute;
   right: 0;
-  top: calc(100% + 12px);
+  top: calc(100% + 11px);
   width: 130px;
   list-style: none;
   box-shadow: 0 1px 4px #e0e0e0;
