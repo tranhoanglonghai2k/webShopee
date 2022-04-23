@@ -197,3 +197,38 @@ html {
 .select-input__link:hover {
   color: var(--primary-color);
 }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.pagination-item {
+  margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item__link {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.pagination-item--active:hover .pagination-item__link {
+  filter: brightness(95%);
+}
+
+.pagination-item__link {
+  --height: 30px;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #939393;
+  min-width: 40px;
+  height: var(--height);
+  line-height: var(--height);
+  display: block;
+  text-align: center;
+  border-radius: 3px;
+}
